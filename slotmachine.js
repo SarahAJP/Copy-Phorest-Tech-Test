@@ -1,5 +1,6 @@
+//randomizes the 4 colours in each of the slots
 function chooseColour() {
-
+    //array contains 4 images which are the 4 possible colours in the slot machine
     var slotColours = new Array("images/black.jpg","images/white.jpg","images/yellow.png","images/green.png");
 
     var randomColour1 = Math.floor(Math.random() * slotColours.length);
@@ -15,7 +16,7 @@ function chooseColour() {
     winLoseMessage();
 }
 
-
+//lets the player know if they won or lost the spin
 function winLoseMessage() {
 
     var item1 = document.getElementById("slot1").src;
@@ -40,6 +41,8 @@ function winLoseMessage() {
 let purse = 100;
 let jackpot = 5000;
 
+//evaluates whether the player has won the jackpot or can keep playing
+//also has counters for amounts in the players purse and the jackpot 
 function moneyCounter(item1, item2, item3, item4) {
     if (item1 == item2 && item1 == item3 && item1 == item4 && item2 == item3 && item2 == item4 && item3 == item4){
         purse = jackpot;
@@ -56,9 +59,9 @@ function moneyCounter(item1, item2, item3, item4) {
 
 function playAgainMessage(jackpot, purse){
     if (jackpot == 0){
-        document.getElementById("moneyMessage").innerHTML = "You have won the jackpot";
+        document.getElementById("moneyMessage").innerHTML = "You have won the jackpot! Do you want to play again?";
     }
     if (purse == 0){
-        document.getElementById("moneyMessage").innerHTML = "You have run out of money";
+        document.getElementById("moneyMessage").innerHTML = "You have run out of money. Do you want to play again?";
     }
 }
