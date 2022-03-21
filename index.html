@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Slot Machine</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="slotmachine.js"></script>
+    </head>
+    
+    <body>
+            
+        <h1>Play the slot machine</h1>
+        <h2>It costs €1 to play</h2>
+        <h3>The jackpot is currently: €<div id="jackpotAmount">5000</div></h3>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="slotSpace1"><img src="images/box.png" width="30" height="30" id="slot1"></span>
+                    </td>
+                    <td>
+                        <span id="slotSpace2"><img src="images/box.png" width="30" height="30" id="slot2"></span>
+                    </td>
+                    <td>
+                        <span id="slotSpace3"><img src="images/box.png" width="30" height="30" id="slot3"></span>
+                    </td>
+                    <td>
+                        <span id="slotSpace4"><img src="images/box.png" width="30" height="30" id="slot4"></span>
+                    </td>
+                </tr>
+            </tbody>       
+        </table>
+        
+        <button onclick="chooseColour();">Spin</button>
+        <div id="winLose"> </div>
+        <div id="noMoney"> </div>
+        <h3>You have this much left to play: €<div id="moneyAmount">100</div></h3>
+        
+    </body>
+</html>
