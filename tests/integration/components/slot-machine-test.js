@@ -1,7 +1,9 @@
-import { module, test } from 'qunit';
+import { module, test} from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import { click } from '@ember/test-helpers';
+
 
 module('Integration | Component | slot-machine', function (hooks) {
   setupRenderingTest(hooks);
@@ -12,15 +14,9 @@ module('Integration | Component | slot-machine', function (hooks) {
 
     await render(hbs`<SlotMachine />`);
 
-    assert.dom(this.element).hasText('');
+    let spinButton = this.element.querySelector('#spinButton');
+    assert.dom(spinButton).hasText('Spin');
 
-    // Template block usage:
-    await render(hbs`
-      <SlotMachine>
-        template block text
-      </SlotMachine>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    await click(this.element.querySelector('#spinButton'));
   });
 });
