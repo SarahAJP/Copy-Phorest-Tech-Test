@@ -3,7 +3,8 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class SlotMachineComponent extends Component {
-    //initialise the player's purse and the jackpot
+  //initialise the player's purse and the jackpot
+  //tracked properties values' are tracked in response to chnages made
   @tracked purse = 100;
   @tracked jackpot = 5000;
 
@@ -80,7 +81,7 @@ export default class SlotMachineComponent extends Component {
 
     this.playAgainMessage();
   }
-
+//this disables the spin button whne the game is over and prompts the player to start again
  playAgainMessage(){
     var spinButton = document.getElementById("spinButton");
     var playAgainButton = document.getElementById("playAgainButton");
@@ -96,9 +97,8 @@ export default class SlotMachineComponent extends Component {
         playAgainButton.style.display = "inline";
         playAgain.innerHTML = "You have run out of money. Click here to play again";
     }
-
   }
-
+  //reloads the page (ire restarts the slot machine) when the user wins or loses
   restartGame(){
     window.location.reload()
   }

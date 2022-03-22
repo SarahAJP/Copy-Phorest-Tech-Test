@@ -3,7 +3,7 @@
 <h2>Match 4 colours to win the jackpot!</h2>
 <h3>The jackpot is currently: <div id="jackpotAmount">€5000</div></h3>
 
-<!--        the table holds the 4 slots where a colour is randomly generated-->
+<!--the table holds the 4 slots where a colour is randomly generated-->
 <table>
     <tbody>
         <tr>
@@ -26,6 +26,6 @@
 <button type="button" id="spinButton" {{on "click" this.chooseColour}}>Spin</button>
 <div id="winLose"> </div>
 
-<!--this button appears when the game is won or lost if the user wants to play again the page refreshes-->
+<!--this button appears when the game is won or lost. If the user wants to play again the page refreshes-->
 <button type="button" id= "playAgainButton" {{on "click" this.restartGame}}><div id= "playAgain"></div></button>
 <h3>You have this much left to play: <div id="moneyAmount">€100</div></h3>
