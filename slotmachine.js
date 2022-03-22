@@ -42,7 +42,7 @@ let purse = 100;
 let jackpot = 5000;
 
 //evaluates whether the player has won the jackpot or can keep playing
-//also has counters for amounts in the players purse and the jackpot 
+//also has counters for amounts in the players purse and the jackpot
 function moneyCounter(item1, item2, item3, item4) {
     if (item1 == item2 && item1 == item3 && item1 == item4 && item2 == item3 && item2 == item4 && item3 == item4){
         purse = jackpot;
@@ -58,10 +58,15 @@ function moneyCounter(item1, item2, item3, item4) {
 }
 
 function playAgainMessage(jackpot, purse){
+    var spinButton = document.getElementById("spinButton");
     if (jackpot == 0){
+        spinButton.disabled = true;
+        document.getElementById("playAgainButton").style.display = "inline";
         document.getElementById("moneyMessage").innerHTML = "You have won the jackpot! Do you want to play again?";
     }
     if (purse == 0){
+        spinButton.disabled = true;
+        document.getElementById("playAgainButton").style.display = "inline";
         document.getElementById("moneyMessage").innerHTML = "You have run out of money. Do you want to play again?";
     }
 }

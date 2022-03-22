@@ -1,1 +1,8 @@
-body {background-color: mediumpurple;}
+body {
+    background-color: mediumpurple;
+}
+
+
+#playAgainButton{
+    display: none;
+}
