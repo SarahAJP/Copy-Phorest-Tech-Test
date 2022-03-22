@@ -57,16 +57,22 @@ function moneyCounter(item1, item2, item3, item4) {
     playAgainMessage(jackpot, purse)
 }
 
+
 function playAgainMessage(jackpot, purse){
     var spinButton = document.getElementById("spinButton");
     if (jackpot == 0){
         spinButton.disabled = true;
         document.getElementById("playAgainButton").style.display = "inline";
-        document.getElementById("moneyMessage").innerHTML = "You have won the jackpot! Do you want to play again?";
+        document.getElementById("playAgain").innerHTML = "You have won the jackpot! Click here to play again";
     }
     if (purse == 0){
         spinButton.disabled = true;
         document.getElementById("playAgainButton").style.display = "inline";
-        document.getElementById("moneyMessage").innerHTML = "You have run out of money. Do you want to play again?";
+        document.getElementById("playAgain").innerHTML = "You have run out of money. Click here to play again";
     }
+    
 }
+
+//function refreshPage(){
+//    window.location.reload();
+//}
