@@ -8,29 +8,24 @@
     <tbody>
         <tr>
             <td>
-                <span id="slotSpace1"><img src="images/box.png" width="40" height="40" alt="1st slot of Slot Machine" id="slot1"></span>
+                <span id="slotSpace1"><img src="/box.png" width="40" height="40" alt="1st slot of Slot Machine" id="slot1"></span>
             </td>
             <td>
-                <span id="slotSpace2"><img src="images/box.png" width="40" height="40" alt="2nd slot of Slot Machine" id="slot2"></span>
+                <span id="slotSpace2"><img src="/box.png" width="40" height="40" alt="2nd slot of Slot Machine" id="slot2"></span>
             </td>
             <td>
-                <span id="slotSpace3"><img src="images/box.png" width="40" height="40" alt="3rd slot of Slot Machine" id="slot3"></span>
+                <span id="slotSpace3"><img src="/box.png" width="40" height="40" alt="3rd slot of Slot Machine" id="slot3"></span>
             </td>
             <td>
-                <span id="slotSpace4"><img src="images/box.png" width="40" height="40" alt="4th slot of Slot Machine" id="slot4"></span>
+                <span id="slotSpace4"><img src="/box.png" width="40" height="40" alt="4th slot of Slot Machine" id="slot4"></span>
             </td>
         </tr>
-    </tbody>       
+    </tbody>
 </table>
 
 <button type="button" id="spinButton" {{on "click" this.chooseColour}}>Spin</button>
 <div id="winLose"> </div>
 
 <!--this button appears when the game is won or lost if the user wants to play again the page refreshes-->
-<button type="button" id= "playAgainButton" {{on "click" this.playAgainMessage; this.window.location.reload}}><div id= "playAgain"></div></button>
+<button type="button" id= "playAgainButton" {{on "click" this.restartGame}}><div id= "playAgain"></div></button>
 <h3>You have this much left to play: <div id="moneyAmount">€100</div></h3>
-
-
-        
-<!--this button appears when the game is won or lost if the user wants to play again the page refreshes-->
-<!--<button id= "playAgainButton" onclick="playAgainMessage(); window.location.reload();"><div id= "playAgain"> </div></button>-->

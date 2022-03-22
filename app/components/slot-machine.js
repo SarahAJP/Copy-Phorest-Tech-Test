@@ -8,7 +8,7 @@ export default class SlotMachineComponent extends Component {
   @tracked jackpot = 5000;
 
   //randomizes the 4 colours in each of the slots
-  @action 
+  @action
   chooseColour() {
     //array contains 4 images which are the 4 possible colours in the slot machine
     var slotColours = new Array(
@@ -29,9 +29,9 @@ export default class SlotMachineComponent extends Component {
     document.getElementById('slot4').src = slotColours[randomColour4];
 
     this.winLoseMessage();
-      
+
   }
-    
+
   //lets the player know if they won or lost the spin
   winLoseMessage() {
     var item1 = document.getElementById('slot1').src;
@@ -50,7 +50,7 @@ export default class SlotMachineComponent extends Component {
       item2 == item4 &&
       item3 == item4
     ) {
-        document.getElementById('winLose').innerHTML = win;
+      document.getElementById('winLose').innerHTML = win;
     } else {
       document.getElementById('winLose').innerHTML = lose;
     }
@@ -83,15 +83,23 @@ export default class SlotMachineComponent extends Component {
 
  playAgainMessage(){
     var spinButton = document.getElementById("spinButton");
-    if (jackpot == 0){
+    var playAgainButton = document.getElementById("playAgainButton");
+    var playAgain = document.getElementById("playAgain");
+
+    if (this.jackpot == 0){
         spinButton.disabled = true;
-        document.getElementById("playAgainButton").style.display = "inline";
-        document.getElementById("playAgain").innerHTML = "You have won the jackpot! Click here to play again";
+        playAgainButton.style.display = "inline";
+        playAgain.innerHTML = "You have won the jackpot! Click here to play again";
     }
-    if (purse == 0){
+    if (this.purse == 0){
         spinButton.disabled = true;
-        document.getElementById("playAgainButton").style.display = "inline";
-        document.getElementById("playAgain").innerHTML = "You have run out of money. Click here to play again";
+        playAgainButton.style.display = "inline";
+        playAgain.innerHTML = "You have run out of money. Click here to play again";
     }
-    
+
+  }
+
+  restartGame(){
+    window.location.reload()
+  }
 }
