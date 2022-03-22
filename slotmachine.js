@@ -51,8 +51,8 @@ function moneyCounter(item1, item2, item3, item4) {
         jackpot += 1;
         purse -= 1;
     }
-    document.getElementById("jackpotAmount").innerHTML = jackpot;
-    document.getElementById("moneyAmount").innerHTML = purse;
+    document.getElementById("jackpotAmount").innerHTML = "€" + jackpot;
+    document.getElementById("moneyAmount").innerHTML = "€" + purse;
 
     playAgainMessage(jackpot, purse)
 }
@@ -72,7 +72,3 @@ function playAgainMessage(jackpot, purse){
     }
     
 }
-
-//function refreshPage(){
-//    window.location.reload();
-//}

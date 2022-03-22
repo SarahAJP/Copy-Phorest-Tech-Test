@@ -1,5 +1,7 @@
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Slot Machine</title>
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="slotmachine.js"></script>
@@ -9,7 +11,8 @@
             
         <h1>Play the slot machine</h1>
         <h2>It costs €1 to play</h2>
-        <h3>The jackpot is currently: €<div id="jackpotAmount">5000</div></h3>
+        <h2>Match 4 colours to win the jackpot!</h2>
+        <h3>The jackpot is currently: <div id="jackpotAmount">€5000</div></h3>
         
 <!--        the table holds the 4 slots where a colour is randomly generated-->
         <table>
@@ -37,7 +40,7 @@
         
 <!--this button appears when the game is won or lost if the user wants to play again the page refreshes-->
         <button id= "playAgainButton" onclick="playAgainMessage(); window.location.reload();"><div id= "playAgain"> </div></button>
-        <h3>You have this much left to play: €<div id="moneyAmount">100</div></h3>
+        <h3>You have this much left to play: <div id="moneyAmount">€100</div></h3>
         
     </body>
 </html>
