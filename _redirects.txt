@@ -1,1 +1,1 @@
-/* /index.html 200
+/* /slot-machine.hbs 200
