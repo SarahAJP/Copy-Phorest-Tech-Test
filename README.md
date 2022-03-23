@@ -2,7 +2,7 @@
 
 Hi! Thank you for taking the time to evaluate my tech test. In this file I will go through how I worked through the assessment and explain all the choices I have made along the way.
 
-The way I approached this assessment was to first get the required functionality working in Vanilla JavaScript along with some simple but clean UI. I then had enough time to add Ember as my framework. I know Phorest uses Ember as their frontend framework and I wanted to take on the challenge and try using it. I also knew from my research that it would be useful for writing tests and deploying my application easily. This change from Vanilla JavaScript to using Ember meant that my functions became methods in the SlotMachineComponent class and index.html became the slot-machine.hbs component.
+The way I approached this assessment was to first get the required functionality working in Vanilla JavaScript along with some simple but clean UI. I then had enough time to add Ember as my framework. I know Phorest uses Ember as their frontend framework and I wanted to take on the challenge and try using it. This change from Vanilla JavaScript to using Ember meant that my functions became methods in the SlotMachineComponent class and index.html became the slot-machine.hbs component.
 
 When I first approached the problem I broke the core elements down into 4 main methods:
 
@@ -17,10 +17,6 @@ Outside of the function I had 2 tracked properties, the purse and the jackpot. T
 
 #### Propmting the user to play again
 The final main method was the playAaginMessage() method that contains a button that appears when the player has either won the jackpot or ran out of money. This disables the Spin button and prompts the user to restart the game. When clicked this button calls upon the restartGame() method which reloads the page and the game starts again.
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Prerequisites
 
@@ -48,3 +44,7 @@ You will need the following things properly installed on your computer.
 * I added some Integration tests to test out functionality in the Components
 * `ember test`
 * `ember test --server`
+
+### Deploying
+
+One part of the project that I did not get time to finish was deploying my application. I followed Ember's Quick Guide on how to deploy the app to Netlify. I was able to deploy it but I was unable to configure the components where I had stored the functionality to show up, so it only showed a blank site. If I had more time this is one thing that I would liked to have finished. 
