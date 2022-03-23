@@ -2,16 +2,17 @@ body {
     background-color: #CCCCFF;
     font-family: "Monaco", monospace;
     margin: auto;
-    padding: 90px;
+    padding: 30px;
     text-align: center;
     color: #3F4246;
 }
 
-#playAgainButton{
-    display: none;
-    background-color: #c2fbd7;
+table, tr, td{
+    border: 6px solid;
+    border-color: #767C83;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 #spinButton {
   background-color: #c2fbd7;
@@ -32,13 +33,21 @@ body {
   background-color: #fff;
 }
 
-table, tr, td{
-    border: 6px solid;
-    border-color: #767C83;
-    margin-left: auto;
-    margin-right: auto;
+#playAgainButton{
+    display: none;
+    background-color: #FF7070;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 2px 2px 0 0;
+    color: #A80000;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 9px;
+    line-height: 50px;
+    text-align: center;
 }
 
-#winLose {
-    padding, 20px;
+#playAgainButton:hover {
+  background-color: #fff;
 }
