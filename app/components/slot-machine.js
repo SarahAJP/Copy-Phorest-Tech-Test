@@ -4,7 +4,7 @@ import { action } from '@ember/object';
 
 export default class SlotMachineComponent extends Component {
   //initialise the player's purse and the jackpot
-  //tracked properties values' are tracked in response to chnages made
+  //tracked properties' values are tracked in response to changes made to them
   @tracked purse = 100;
   @tracked jackpot = 5000;
 
@@ -19,6 +19,7 @@ export default class SlotMachineComponent extends Component {
       '/green.png'
     );
 
+    // Math.floor() generates whole number to corresponded with an index in the array
     var randomColour1 = Math.floor(Math.random() * slotColours.length);
     var randomColour2 = Math.floor(Math.random() * slotColours.length);
     var randomColour3 = Math.floor(Math.random() * slotColours.length);
